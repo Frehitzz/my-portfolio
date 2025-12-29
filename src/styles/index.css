@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #91ff00;
+  z-index: 1;
+}
+
+.social-link .icon {
+  position: relative;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.icon {
+  color: white;
+}
+
+.social-link:hover {
+  border: 2px solid white;
+}
+
+.social-link:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social-link:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.social-link:hover:before {
+  top: 0;
+}
+
+.social-link.facebook:before {
+  background: #3b5999;
+}
+
+.social-link.instagram:before {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.social-link.linkedin:before {
+  background: #0077b5;
+}
+
+.social-link.github:before {
+  background: #333;
+}
