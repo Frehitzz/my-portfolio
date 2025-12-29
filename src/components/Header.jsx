@@ -28,12 +28,14 @@ function Mainheader() {
         </div>
 
         <div className="mt-4 flex items-center gap-4">
-          <p className="w-30 text-lg flex items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
-            Resume
-            <span>
-              <IoMdDownload />
-            </span>
-          </p>
+          <div className="holographic-card w-30 text-lg flex items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
+            <p className="flex items-center gap-2">
+              Resume
+              <span>
+                <IoMdDownload />
+              </span>
+            </p>
+          </div>
 
           <p className="text-4xl text-white">|</p>
 
