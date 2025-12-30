@@ -8,27 +8,43 @@ import { FaGithub } from "react-icons/fa";
 
 function Mainheader() {
   return (
-    <div className="flex items-center gap-50">
+    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-10 lg:mt-15">
+      {/* CIRCLE PORFILE */}
+      <div className="flex justify-center">
+        <div className="flex w-53 h-53 md:w-63 md:h-63 lg:w-83 lg:h-83 rounded-full bg-[#91ff00] items-center justify-center mt-8 lg:mt-0">
+          <div className="w-50 h-50 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full bg-[url('../assets/images/me.jpg')] bg-cover bg-center"></div>
+        </div>
+      </div>
       <div className="">
-        <h1 className="text-9xl text-[#91ff00]">
-          Hi there,
-          <br /> Im Fritz Harly
-        </h1>
-        <div className="">
-          <div className="flex gap-1">
-            <p className="text-lg text-[#599c02] flex">
+        {/* MAIN HEAD TEXT */}
+        <div className="flex items-center justify-center mt-8 md:block">
+          <h1 className="text-3xl md:text-6xl lg:text-8xl text-[#91ff00]">
+            Hi there,
+            <br className="hidden sm:hidden md:block" /> I'm Fritz Harly
+          </h1>
+        </div>
+
+        {/* LOCATION AND DESCRIPTION */}
+        <div className="flex flex-col justify-center">
+          {/* LOCATION */}
+          <div className="flex gap-1 justify-center items-center md:justify-start">
+            <p className="flex text-lg md:text-2xl text-[#599c02] items-center">
               <CiLocationOn className="text-2xl text-[#599c02]" />
               Taguig City, Philippines
             </p>
           </div>
 
-          <p className="text-2xl text-white ml-1">
-            A web developer on a journey to full stack mastery
-          </p>
+          {/* DESCRIPTION */}
+          <div className="flex items-center">
+            <p className="text-lg md:text-2xl md:text-start md:ml-1 text-white text-center">
+              A web developer on a journey to full stack mastery
+            </p>
+          </div>
         </div>
 
-        <div className="mt-4 flex items-center gap-4">
-          <div className="holographic-card w-30 text-lg flex items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
+        <div className="md:flex mt-4 items-center gap-4">
+          {/* RESUME CONTAINER */}
+          <div className="holographic-card text-lg flex md:w-30 lg:w-50 items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
             <p className="flex items-center gap-2">
               Resume
               <span>
@@ -37,9 +53,11 @@ function Mainheader() {
             </p>
           </div>
 
-          <p className="text-4xl text-white">|</p>
+          {/* UNCOMMENT FOR WIDER DEVICE */}
+          <p className="hidden sm:hidden md:block text-4xl text-white">|</p>
 
-          <div className="links flex gap-4">
+          {/* LINKS CONTAINER */}
+          <div className="links flex gap-4 justify-center mt-4 md:mt-0">
             {/* FACEBOOK */}
             <a
               href="https://www.facebook.com/fritz.harly.3"
@@ -73,9 +91,6 @@ function Mainheader() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="w-93 h-93 rounded-full bg-[#91ff00] flex items-center justify-center">
-        <div className="image-container w-90 h-90 rounded-full bg-[url('../assets/images/me.jpg')] bg-cover bg-center"></div>
       </div>
     </div>
   );

@@ -4,12 +4,14 @@ import Counter from "../components/Counter.jsx";
 
 function Home() {
   return (
-    <div className="">
+    <div className="px-4 md:px-10 lg:px-15">
       <Navbar />
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="">
+      <div className="lg:min-h-screen flex items-center justify-center">
+        <div className="w-full max-w-7xl flex flex-col lg:h-[80vh]">
           <Mainheader />
-          <Counter />
+          <div className="mt-auto">
+            <Counter />
+          </div>
         </div>
       </div>
     </div>

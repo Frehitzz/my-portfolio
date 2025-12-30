@@ -6,11 +6,13 @@ function Counter() {
     { value: 3, label: "Projects\ndeployed" },
   ];
   return (
-    <div className="flex mt-40 justify-between">
+    <div className="flex mt-10 md:mt-15 lg:mt-0 justify-between">
       {stats.map((stat, index) => (
-        <div key={index} className="projects flex items-center gap-3">
-          <h1 className="text-7xl text-[#599c02]">{stat.value}</h1>
-          <p className="text-3xl text-white whitespace-pre-line">
+        <div key={index} className="projects flex items-center gap-1">
+          <h1 className="text-5xl md:text-7x lg:text-8xl text-[#599c02]">
+            {stat.value}
+          </h1>
+          <p className="text-lg md:text-2xl text-white whitespace-pre-line">
             {stat.label}
           </p>
         </div>
