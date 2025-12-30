@@ -40,18 +40,31 @@ function Mainheader() {
           <p className="text-4xl text-white">|</p>
 
           <div className="links flex gap-4">
-            <a href="#" className="social-link facebook">
+            {/* FACEBOOK */}
+            <a
+              href="https://www.facebook.com/fritz.harly.3"
+              className="social-link facebook"
+            >
               <CgFacebook className="icon text-4xl rounded-full border-[#91ff00] text-white" />
             </a>
 
-            <a href="#" className="social-link instagram">
+            {/* INSTAGRAM */}
+            <a
+              href="https://www.instagram.com/frehitz_____/"
+              className="social-link instagram"
+            >
               <FaInstagram className="icon text-4xl rounded-full border-[#91ff00] text-white" />
             </a>
 
-            <a href="#" className="social-link linkedin">
+            {/* LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/fritz-harly-degamo-35b37530a/"
+              className="social-link linkedin"
+            >
               <RiLinkedinFill className="icon text-4xl rounded-full text-white" />
             </a>
 
+            {/* GITHUB */}
             <a
               href="https://github.com/Frehitzz"
               className="social-link github"
