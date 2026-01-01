@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar.jsx";
 import Mainheader from "../components/Header.jsx";
 import Counter from "../components/Counter.jsx";
+import Aboutme from "../components/Aboutme.jsx";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Aboutme />
     </div>
   );
 }
