@@ -7,20 +7,21 @@ body {
   background-color: #18191c;
 }
 
-@keyframes scrollLeft {
+/* HOME SCROLL EFFECT */
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-40%);
   }
 }
 
-.scroll-left {
-  animation: scrollLeft 20s linear infinite;
+.scroll-wrapper {
+  animation: scroll 20s linear infinite;
+  width: max-content;
 }
 
 .scroll-container {
   overflow: hidden;
-  white-space: nowrap;
 }

@@ -45,15 +45,15 @@ function Aboutme() {
 
   return (
     <div>
-      <h1 className="text-center text-3xl mt-15 text-[#91ff00] text-bold">
+      <h1 className="text-center text-3xl md:text-4xl mt-15 text-[#91ff00] text-bold">
         ABOUT ME
       </h1>
 
       <div className="grid grid-cols-1 grid-rows-3 gap-4 mt-5">
         {/* SHORT DESCRIPTION CONTAINER */}
-        <div className="rounded-lg min-h-40 bg-[url('../assets/images/program.jpg')] bg-cover bg-center">
+        <div className="rounded-lg min-h-40 md:min-h-45 bg-[url('../assets/images/program.jpg')] bg-cover bg-center">
           <div className="">
-            <p className="p-2 text-white text-lg font-bold w-50">
+            <p className="p-2 text-white text-lg md:text-2xl font-bold w-60">
               Front-end developer with PHP/MySQL experience and, learning MERN
               stack.
             </p>
@@ -62,60 +62,60 @@ function Aboutme() {
 
         {/* TECH STACK CONTAINER */}
         <div className="rounded-lg flex flex-col p-2 border border-[#91ff00]">
-          <p className="text-[#91ff00] text-lg font-bold text-center">
+          <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             PROGRAMMING LANGUAGES
           </p>
           {/* INFINITE SCROLLING CAROUSEL EFFECT */}
-          <div className="scroll-container flex-1 flex items-center">
-            <div className="inline-flex text-5xl gap-4 text-white">
-              <div className="scroll-left inline-flex gap-4">
-                {programLang.map((item) => {
-                  const Icon = item.icon;
-                  return <Icon key={item.id} />;
-                })}
-              </div>
-              <div className="scroll-left inline-flex gap-4">
-                {programLang.map((item) => {
-                  const Icon = item.icon;
-                  return <Icon key={`duplicate-${item.id}`} />;
-                })}
-              </div>
+          <div className="scroll-container flex-1 flex items-center overflow-hidden">
+            <div className="scroll-wrapper inline-flex text-5xl gap-4 text-white">
+              {/* Render the array twice for seamless loop */}
+              {[
+                ...programLang,
+                ...programLang,
+                ...programLang,
+                ...programLang,
+                ...programLang,
+                ...programLang,
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return <Icon key={`icon-${index}`} />;
+              })}
             </div>
           </div>
         </div>
         {/* FRAMEWORKS AND TOOLS CONTAINER */}
         <div className="rounded-lg flex flex-col p-2 border border-[#91ff00]">
-          <p className="text-[#91ff00] text-lg font-bold text-center">
+          <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             FRAMEWORKS & TOOLS
           </p>
-          <div className="scroll-container flex-1 flex items-center">
-            <div className="inline-flex text-5xl gap-4 text-white">
-              <div className="scroll-left inline-flex gap-4">
-                {frameTools.map((item) => {
-                  const Icon = item.icon;
-                  return <Icon key={item.id} />;
-                })}
-              </div>
-              <div className="scroll-left inline-flex gap-4">
-                {frameTools.map((item) => {
-                  const Icon = item.icon;
-                  return <Icon key={`duplicate-${item.id}`} />;
-                })}
-              </div>
+          <div className="scroll-container flex-1 flex items-center overflow-hidden">
+            <div className="scroll-wrapper inline-flex text-5xl gap-4 text-white">
+              {/* Render the array twice for seamless loop */}
+              {[
+                ...frameTools,
+                ...frameTools,
+                ...frameTools,
+                ...frameTools,
+                ...frameTools,
+                ...frameTools,
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return <Icon key={`icon-${index}`} />;
+              })}
             </div>
           </div>
         </div>
         {/* EDUCATION CONTAINER */}
-        <div className="min-h-40 rounded-lg flex flex-col p-2 border border-[#91ff00]">
-          <p className="text-[#91ff00] text-lg font-bold text-center">
+        <div className="min-h-40 md:min-h-45 rounded-lg flex flex-col p-2 border border-[#91ff00]">
+          <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             EDUCATION
           </p>
-          <div className="flex justify-between mt-3">
+          <div className="flex justify-between md:justify-around mt-3">
             {education.map((edu) => (
               <div key={edu.id} className="flex flex-col items-center">
-                <h1 className="text-[#599c02]">{edu.level}</h1>
-                <p className="text-center text-white">{edu.name}</p>
-                <p className="text-[#91ff00]">{edu.year}</p>
+                <h1 className="text-[#599c02] md:text-lg">{edu.level}</h1>
+                <p className="text-center text-white md:text-lg">{edu.name}</p>
+                <p className="text-[#91ff00] md:text-lg">{edu.year}</p>
               </div>
             ))}
           </div>
