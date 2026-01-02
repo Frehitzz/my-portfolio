@@ -45,13 +45,13 @@ function Aboutme() {
 
   return (
     <div>
-      <h1 className="text-center text-3xl md:text-4xl mt-15 text-[#91ff00] text-bold">
+      <h1 className="text-center text-3xl md:text-4xl my-7 lg:my-10 text-[#91ff00] text-bold">
         ABOUT ME
       </h1>
 
-      <div className="grid grid-cols-1 grid-rows-3 gap-4 mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-4 mt-5">
         {/* SHORT DESCRIPTION CONTAINER */}
-        <div className="rounded-lg min-h-40 md:min-h-45 bg-[url('../assets/images/program.jpg')] bg-cover bg-center">
+        <div className="rounded-lg min-h-40 md:min-h-45 bg-[url('../assets/images/program.jpg')] bg-cover bg-center lg:col-span-2 lg:row-span-2">
           <div className="">
             <p className="p-2 text-white text-lg md:text-2xl font-bold w-60">
               Front-end developer with PHP/MySQL experience and, learning MERN
@@ -61,7 +61,7 @@ function Aboutme() {
         </div>
 
         {/* TECH STACK CONTAINER */}
-        <div className="rounded-lg flex flex-col p-2 border border-[#91ff00]">
+        <div className="rounded-lg flex flex-col p-2 border border-[#91ff00] lg:col-span-3">
           <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             PROGRAMMING LANGUAGES
           </p>
@@ -84,7 +84,7 @@ function Aboutme() {
           </div>
         </div>
         {/* FRAMEWORKS AND TOOLS CONTAINER */}
-        <div className="rounded-lg flex flex-col p-2 border border-[#91ff00]">
+        <div className="rounded-lg flex flex-col p-2 border border-[#91ff00] lg:col-span-3">
           <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             FRAMEWORKS & TOOLS
           </p>
@@ -106,28 +106,35 @@ function Aboutme() {
           </div>
         </div>
         {/* EDUCATION CONTAINER */}
-        <div className="min-h-40 md:min-h-45 rounded-lg flex flex-col p-2 border border-[#91ff00]">
+        <div className="min-h-40 md:min-h-45 rounded-lg flex flex-col p-2 border border-[#91ff00] lg:col-span-5">
           <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             EDUCATION
           </p>
-          <div className="flex justify-between md:justify-around mt-3">
-            {education.map((edu) => (
-              <div key={edu.id} className="flex flex-col items-center">
-                <h1 className="text-[#599c02] md:text-lg">{edu.level}</h1>
-                <p className="text-center text-white md:text-lg">{edu.name}</p>
-                <p className="text-[#91ff00] md:text-lg">{edu.year}</p>
-              </div>
-            ))}
+          <div className="flex justify-center gap-5 mt-3 items-center">
+            <div className="flex flex-col items-center">
+              <h1 className="text-[#599c02] md:text-lg lg:text-2xl">
+                {education[0].level}
+              </h1>
+              <p className="text-center text-white md:text-lg lg:text-2xl">
+                {education[0].name}
+              </p>
+              <p className="text-[#91ff00] md:text-lg">{education[0].year}</p>
+            </div>
+
+            <div className="w-32 md:w-48 lg:w-80 h-0.5 bg-[#91ff00]"></div>
+
+            <div className="flex flex-col items-center">
+              <h1 className="text-[#599c02] md:text-lg lg:text-2xl">
+                {education[1].level}
+              </h1>
+              <p className="text-center text-white md:text-lg lg:text-2xl">
+                {education[1].name}
+              </p>
+              <p className="text-[#91ff00] md:text-lg">{education[1].year}</p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* DESKTOP GRID */}
-      {/* <div className="grid grid-flow-col grid-rows-3 gap-4">
-        <div className="row-span-3 bg-red-300">SHORT DESCRIPTION</div>
-        <div className="col-span-2 bg-blue-300">EDUCATION</div>
-        <div className="col-span-2 bg-yellow-300">TECH STACK</div>
-      </div> */}
     </div>
   );
 }
