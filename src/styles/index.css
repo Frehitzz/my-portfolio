@@ -25,3 +25,7 @@ body {
 .scroll-container {
   overflow: hidden;
 }
+
+.scroll-wrapper:hover {
+  animation-play-state: paused;
+}

@@ -12,20 +12,20 @@ import { FaFigma } from "react-icons/fa";
 
 function Aboutme() {
   const programLang = [
-    { id: 1, icon: FaHtml5 },
-    { id: 2, icon: FaCss3 },
-    { id: 2, icon: FaJs },
-    { id: 2, icon: RiPhpFill },
-    { id: 2, icon: GrMysql },
+    { id: 1, icon: FaHtml5, name: "HTML5" },
+    { id: 2, icon: FaCss3, name: "CSS3" },
+    { id: 2, icon: FaJs, name: "JavaScript" },
+    { id: 2, icon: RiPhpFill, name: "Php" },
+    { id: 2, icon: GrMysql, name: "MySQL" },
   ];
 
   const frameTools = [
-    { id: 1, icon: FaReact },
-    { id: 2, icon: RiTailwindCssFill },
-    { id: 3, icon: FaGitAlt },
-    { id: 4, icon: FaGithub },
-    { id: 5, icon: VscVscode },
-    { id: 6, icon: FaFigma },
+    { id: 1, icon: FaReact, name: "React" },
+    { id: 2, icon: RiTailwindCssFill, name: "Tailwind" },
+    { id: 3, icon: FaGitAlt, name: "Git" },
+    { id: 4, icon: FaGithub, name: "Github" },
+    { id: 5, icon: VscVscode, name: "Vscode" },
+    { id: 6, icon: FaFigma, name: "Figma" },
   ];
 
   const education = [
@@ -78,7 +78,14 @@ function Aboutme() {
                 ...programLang,
               ].map((item, index) => {
                 const Icon = item.icon;
-                return <Icon key={`icon-${index}`} />;
+                return (
+                  <div className="relative group" key={`icon-${index}`}>
+                    <Icon className="cursor-pointer" />
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-[#91ff00] text-black rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                      {item.name}
+                    </span>
+                  </div>
+                );
               })}
             </div>
           </div>
@@ -100,7 +107,14 @@ function Aboutme() {
                 ...frameTools,
               ].map((item, index) => {
                 const Icon = item.icon;
-                return <Icon key={`icon-${index}`} />;
+                return (
+                  <div className="relative group" key={`icon-${index}`}>
+                    <Icon className="cursor-pointer" />
+                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-[#91ff00] text-black rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                      {item.name}
+                    </span>
+                  </div>
+                );
               })}
             </div>
           </div>
