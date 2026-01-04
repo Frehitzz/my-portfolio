@@ -50,26 +50,26 @@ function Timeline() {
               <div className={`w-1/2 ${isLeft ? "pr-8 text-right" : ""}`}>
                 {isLeft && ( // for displaying true isLeft
                   <>
-                    <h1 className="text-2xl font-bold text-[#91ff00]">
+                    <h1 className="text-3xl font-bold text-[#91ff00]">
                       {item.year}
                     </h1>
-                    <p className="text-white">{item.description}</p>
+                    <p className="text-white text-lg">{item.description}</p>
                   </>
                 )}
               </div>
 
               {/* Center dot */}
-              <span className="absolute left-1/2 -translate-x-1/2 top-1.5 w-4 h-4 bg-[#91ff00] rounded-full z-10"></span>
+              <span className="absolute left-1/2 -translate-x-1/2 top-1.5 w-5 h-5 bg-[#91ff00] rounded-full z-10"></span>
 
               {/* Right side content */}
               {/* ${!isLeft} getting the false which means it have the odd numbers */}
               <div className={`w-1/2 ${!isLeft ? "pl-8 text-left" : ""}`}>
                 {!isLeft && ( // for displaying false isLeft
                   <>
-                    <h1 className="text-2xl font-bold text-[#91ff00]">
+                    <h1 className="text-3xl font-bold text-[#91ff00]">
                       {item.year}
                     </h1>
-                    <p className="text-white">{item.description}</p>
+                    <p className="text-white text-lg">{item.description}</p>
                   </>
                 )}
               </div>
