@@ -3,6 +3,7 @@ import Mainheader from "../components/Header.jsx";
 import Counter from "../components/Counter.jsx";
 import Aboutme from "../components/Aboutme.jsx";
 import Timeline from "../components/Timeline.jsx";
+import Softskills from "../components/Softskills.jsx";
 
 function Home() {
   return (
@@ -17,6 +18,10 @@ function Home() {
       </div>
       <Aboutme />
       <Timeline />
+      <h1 className="text-center text-3xl text-bold text-[#91ff00]">
+        SOFT SKILLS
+      </h1>
+      <Softskills />
     </div>
   );
 }

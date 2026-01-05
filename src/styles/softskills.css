@@ -1,0 +1,15 @@
+.circular-gallery {
+  width: 100%;
+  height: 80vh; /* Add explicit height */
+  overflow: hidden;
+  cursor: grab;
+  margin-bottom: 100px;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+
+.your-parent-container {
+  height: 100vh; /* or 600px, 800px, etc */
+}
