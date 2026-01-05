@@ -32,13 +32,13 @@ function FloatNavbar() {
         }`}
     >
       <div className="flex justify-center">
-        <ul className="flex gap-10 p-2 border w-70 rounded-3xl justify-center items-center border-[#91ff00] text-white bg-white/20 backdrop-blur-md">
+        <ul className="flex gap-10 p-2 md:p-3 lg:p-4 border w-70 md:w-90 lg:w-95 rounded-3xl justify-center items-center border-[#91ff00] text-white bg-white/20 backdrop-blur-md">
           {navItems.map(
             (
               item // using map to display navitems
             ) => (
               <li
-                className={`text-lg ${
+                className={`text-lg md:text-2xl cursor-pointer ${
                   active === item ? "text-[#91ff00] font-bold" : ""
                 }`}
                 key={item}
