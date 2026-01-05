@@ -3,7 +3,7 @@
   height: 80vh; /* Add explicit height */
   overflow: hidden;
   cursor: grab;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 
 .circular-gallery:active {

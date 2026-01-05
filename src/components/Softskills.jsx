@@ -166,13 +166,32 @@ class Media {
     canvas.width = 1024;
     canvas.height = 1024;
 
+    // Detect device type for responsive font sizes
+    const isMobile = this.screen.width < 768;
+    const isTablet = this.screen.width >= 768 && this.screen.width < 1024;
+
+    // Responsive font sizes
+    let titleFontSize, descriptionFontSize;
+
+    if (isMobile) {
+      titleFontSize = 60;
+      descriptionFontSize = 40;
+    } else if (isTablet) {
+      titleFontSize = 70;
+      descriptionFontSize = 45;
+    } else {
+      // Desktop
+      titleFontSize = 80;
+      descriptionFontSize = 50;
+    }
+
     // create background
     context.fillStyle = "#2a2a2a";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    // create text
+    // create text (title)
     context.fillStyle = this.textColor || "#ffffff";
-    context.font = "bold 60px Arial";
+    context.font = `bold ${titleFontSize}px Arial`;
     context.textAlign = "center";
     context.textBaseline = "middle";
     context.fillText(this.text, canvas.width / 2, canvas.height / 2 + 150);
@@ -180,7 +199,7 @@ class Media {
     // create description
     if (this.description) {
       context.fillStyle = this.textColor || "#ffffff";
-      context.font = "normal 45px Arial";
+      context.font = `normal ${descriptionFontSize}px Arial`;
       context.textAlign = "center";
       context.textBaseline = "middle";
 
@@ -188,8 +207,8 @@ class Media {
       const maxWidth = canvas.width - 100;
       const words = this.description.split(" ");
       let line = "";
-      let y = canvas.height / 2 - 200; // Position below title
-      const lineHeight = 50;
+      let y = canvas.height / 2 - 200;
+      const lineHeight = descriptionFontSize + 10; // Dynamic line height based on font size
 
       for (let word of words) {
         const testLine = line + word + " ";
@@ -304,15 +323,41 @@ class Media {
     if (viewport) {
       this.viewport = viewport;
     }
+
+    // Detect device type based on screen width
+    const isMobile = this.screen.width < 768;
+    const isTablet = this.screen.width >= 768 && this.screen.width < 1024;
+    const isDesktop = this.screen.width >= 1024;
+
     this.scale = this.screen.height / 1000;
+
+    // Responsive sizing
+    let heightMultiplier, widthMultiplier;
+
+    if (isMobile) {
+      // Mobile sizes (your current settings)
+      heightMultiplier = 600;
+      widthMultiplier = 400;
+      this.padding = 3;
+    } else if (isTablet) {
+      // Tablet sizes
+      heightMultiplier = 500;
+      widthMultiplier = 350;
+      this.padding = 4;
+    } else {
+      // Desktop sizes
+      heightMultiplier = 550;
+      widthMultiplier = 520;
+      this.padding = 5;
+    }
+
     this.plane.scale.y =
-      // HEIGHT OF THE BOX INSIDE
-      (this.viewport.height * (600 * this.scale)) / this.screen.height;
+      (this.viewport.height * (heightMultiplier * this.scale)) /
+      this.screen.height;
     this.plane.scale.x =
-      // WIDTH OF THE BOX INSIDE
-      (this.viewport.width * (400 * this.scale)) / this.screen.width;
-    // PADDING OF THE BOX
-    this.padding = 3;
+      (this.viewport.width * (widthMultiplier * this.scale)) /
+      this.screen.width;
+
     this.width = this.plane.scale.x + this.padding;
     this.widthTotal = this.width * this.length;
     this.x = this.width * this.index;
