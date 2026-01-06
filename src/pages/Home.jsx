@@ -4,6 +4,7 @@ import Counter from "../components/Counter.jsx";
 import Aboutme from "../components/Aboutme.jsx";
 import Timeline from "../components/Timeline.jsx";
 import Softskills from "../components/Softskills.jsx";
+import Likebutton from "../components/Likebutton.jsx";
 
 function Home() {
   return (
@@ -22,6 +23,13 @@ function Home() {
         SOFT SKILLS
       </h1>
       <Softskills />
+      <div className="flex flex-col items-center gap-2 mb-50">
+        <h1 className="text-4xl text-bold text-center text-white">
+          Thank you for visiting my portfolio!
+        </h1>
+        <p className="text-[#599c02]">You can leave a like</p>
+        <Likebutton />
+      </div>
     </div>
   );
 }
