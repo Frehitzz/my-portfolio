@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const [active, setActive] = useState("Home");
 
   const navItems = [
-    { name: "Projects", link: "../pages/Home.jsx" },
-    { name: "Home", link: "../pages/Home.jsx" },
-    { name: "Contacts", link: "../pages/Home.jsx" },
+    { name: "Projects", link: "/projects" },
+    { name: "Home", link: "/home" },
+    { name: "Contacts", link: "/contact" },
   ];
 
   return (
@@ -17,7 +18,7 @@ function Navbar() {
             className={` ${active === item.name ? "text-[#91ff00]" : ""}`}
             onClick={() => setActive(item.name)}
           >
-            <a href={item.link}>{item.name}</a>
+            <NavLink to={item.link}>{item.name}</NavLink>
           </li>
         ))}
       </ul>
