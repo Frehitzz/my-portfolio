@@ -52,10 +52,8 @@ function Contact() {
           ></textarea>
         </div>
         {/* button */}
-        <div className="">
-          <button className="w-full bg-[#91ff00] p-2 outline-none border border-[#599c02] rounded text-lg font-semibold">
-            Send Message
-          </button>
+        <div className="holographic-card text-lg flex items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
+          <p className="flex items-center gap-2">Send message</p>
         </div>
       </form>
       {/* horizontal line */}
