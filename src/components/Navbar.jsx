@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 function Navbar() {
-  const [active, setActive] = useState("Home");
-
+  const location = useLocation();
   const navItems = [
     { name: "Projects", link: "/projects" },
     { name: "Home", link: "/home" },
@@ -15,8 +14,9 @@ function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.name}
-            className={` ${active === item.name ? "text-[#91ff00]" : ""}`}
-            onClick={() => setActive(item.name)}
+            className={` ${
+              location.pathname === item.link ? "text-[#91ff00]" : ""
+            }`}
           >
             <NavLink to={item.link}>{item.name}</NavLink>
           </li>

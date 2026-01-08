@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 function FloatNavbar() {
   // Handle scroll
   const [show, setShow] = useState(false);
-  // For clicked nav item
-  const [active, setActive] = useState("Home");
+  const location = useLocation();
+  const navItems = [
+    { name: "Projects", link: "/projects" },
+    { name: "Home", link: "/home" },
+    { name: "Contact", link: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,9 +20,6 @@ function FloatNavbar() {
     // removing the added enet listener for when the developer remove the navbar theres no memory leak
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // items for floating navbar
-  const navItems = ["Projects", "Home", "Contact"];
 
   return (
     // if user been scrolled greater than 200px then display the nav
@@ -39,12 +41,13 @@ function FloatNavbar() {
             ) => (
               <li
                 className={`text-lg md:text-2xl cursor-pointer ${
-                  active === item ? "text-[#91ff00] font-bold" : ""
+                  location.pathname === item.link
+                    ? "text-[#91ff00] font-bold"
+                    : ""
                 }`}
                 key={item}
-                onClick={() => setActive(item)} // if the user click the item it put the item on setActive
               >
-                {item}
+                <NavLink to={item.link}>{item.name}</NavLink>
               </li>
             )
           )}
