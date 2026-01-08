@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { FaLocationArrow } from "react-icons/fa";
 import Html from "../assets/images/html.png";
 import Css from "../assets/images/css.png";
 import Js from "../assets/images/js.png";
 import Php from "../assets/images/php.png";
 import Mysql from "../assets/images/mysql.png";
 import Dreambooking from "../assets/images/dreambooking.jpg";
+import Zone from "../assets/images/zone.png";
 function Projectdiv() {
   const [content, setContent] = useState();
 
@@ -16,26 +18,54 @@ function Projectdiv() {
       background: Dreambooking,
     },
     {
-      name: "DreamBooking",
-      description: "An airbnb like system, apartment rental",
-      stack: [Html, Css, Js, Php, Mysql],
-      background: Dreambooking,
+      name: "Zone",
+      description:
+        " A simple productivity web app built for my hackathon project It combines a Pomodoro timer, a to-do list, and a GitHub-style session tracker to help students (like me) stay productive, avoid burnout, and keep track of daily progress.",
+      stack: [Html, Css, Js],
+      background: Zone,
+    },
+    {
+      name: "Zone",
+      description:
+        " A simple productivity web app built for my hackathon project It combines a Pomodoro timer, a to-do list, and a GitHub-style session tracker to help students (like me) stay productive, avoid burnout, and keep track of daily progress.",
+      stack: [Html, Css, Js],
+      background: Zone,
+    },
+    {
+      name: "Zone",
+      description:
+        " A simple productivity web app built for my hackathon project It combines a Pomodoro timer, a to-do list, and a GitHub-style session tracker to help students (like me) stay productive, avoid burnout, and keep track of daily progress.",
+      stack: [Html, Css, Js],
+      background: Zone,
     },
   ];
 
   return (
-    <div className="grid">
+    // main container
+    <div className="grid grid-cols-1 grid-rows-3 gap-3 mb-25">
       {itemProjects.map((item) => (
-        <div className="w-1/8">
-          <img className="w-40 h-20" src={item.background}></img>
-          <h1>{item.name}</h1>
-          <p>{item.description}</p>
-          <div className="flex gap-2">
-            {item.stack.map((tech, index) => (
-              <div className="rounded-full bg-black border border-white w-auto">
-                <img key={index} src={tech} className="w-10 h-10 p-2" />
-              </div>
-            ))}
+        // mapping container
+        <div className="flex flex-col justify-center border border-white/[0.1] p-2 rounded-3xl">
+          {/* img of prohject */}
+          <img className=" w-80 h-45 rounded-2xl" src={item.background}></img>
+          <div className="">
+            <h1 className="text-2xl text-[#91ff00] pt-3">{item.name}</h1>
+            <p className="text-lg text-white py-3">{item.description}</p>
+          </div>
+
+          {/* tech stack main container */}
+          <div className="flex justify-between items-center w-auto">
+            <div className=" flex -space-x-3 rounded-full">
+              {item.stack.map((tech, index) => (
+                <div className="rounded-full bg-black border border-white/[0.3]">
+                  <img key={index} src={tech} className="w-10 h-10 p-2" />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-2 px-2">
+              <p className="text-lg text-white">Live Site</p>
+              <FaLocationArrow className="text-white" />
+            </div>
           </div>
         </div>
       ))}
