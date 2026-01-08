@@ -12,23 +12,15 @@ function Contact() {
   };
 
   return (
-    <div className="mt-5 px-4">
-      {/* email copy notifications */}
-      <div className="w-auto flex justify-center">
-        <span
-          className={`text-center border border-white/[0.5] p-1 w-50 text-white/[0.5] rounded-2xl transition-all duration-300 ease-out ${
-            copied ? "opacity-100 scale-100" : "opacity-0 scale-95"
-          }`}
-        >
-          Copied
-        </span>{" "}
-      </div>
-      <h1 className="text-2xl py-4 text-[#91ff00] text-center">Get in touch</h1>
+    <div className="lg:flex lg:flex-col lg:items-center mt-5 px-4 md:px-15 lg:px-0">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl py-4 text-[#91ff00] text-center">
+        Get in touch
+      </h1>
       {/* FORM */}
-      <form className="">
-        <div className="flex flex-col gap-4 text-white">
+      <form className="lg:w-200">
+        <div className="flex flex-col md:flex-row gap-4 text-white">
           {/* name */}
-          <div className="">
+          <div className="md:flex-1">
             <label className="text-lg">Name</label>
             <br />
             <input
@@ -39,7 +31,7 @@ function Contact() {
             ></input>
           </div>
           {/* email */}
-          <div className="">
+          <div className="md:flex-1">
             <label className="text-lg">Email</label>
             <br />
             <input
@@ -69,7 +61,7 @@ function Contact() {
       {/* horizontal line */}
       <hr className="text-white/[0.2] my-5" />
       {/* copy email */}
-      <div className="flex text-lg gap-2 items-center justify-center text-white border border-white/[0.2] p-2 rounded-2xl">
+      <div className="flex text-lg gap-2 items-center justify-center text-white border border-white/[0.2] p-2 lg:w-80 rounded-2xl">
         <p>fritzharlydegamo@gmail.com</p>
         <button
           className="p-1 border border-white/[0.5] rounded"
@@ -77,6 +69,16 @@ function Contact() {
         >
           <FaRegCopy />
         </button>
+      </div>
+      {/* email copy notifications */}
+      <div className="w-auto flex justify-center">
+        <span
+          className={`text-center border border-white/[0.5] p-1 w-50 text-white/[0.5] rounded-2xl mt-10 transition-all duration-300 ease-out ${
+            copied ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
+          Copied
+        </span>{" "}
       </div>
     </div>
   );
