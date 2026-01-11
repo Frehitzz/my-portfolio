@@ -7,8 +7,9 @@ import Css from "../assets/images/css.png";
 import Js from "../assets/images/js.png";
 import Php from "../assets/images/php.png";
 import Mysql from "../assets/images/mysql.png";
-import Dreambooking from "../assets/images/dreambooking.jpg";
+import Dreambooking from "../assets/images/dreambooking.png";
 import Zone from "../assets/images/zone.png";
+import Todos from "../assets/images/todolist.png";
 function Projectdiv() {
   const [content, setContent] = useState();
 
@@ -28,7 +29,7 @@ function Projectdiv() {
       learned:
         "Through this project, I gained hands-on experience building a full-stack web application using PHP and MySQL, including database design, authentication, role-based access, booking management, reporting, data visualization, and Excel exports, while strengthening my problem-solving skills in security, workflow, and usability.",
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Frehitzz/Dreambooking",
     },
     /*-----------------------------*/
     {
@@ -51,11 +52,21 @@ function Projectdiv() {
     },
     /*--------------------------------------------*/
     {
-      name: "Zone",
-      description:
-        " A simple productivity web app built for my hackathon project It combines a Pomodoro timer, a to-do list, and a GitHub-style session tracker to help students (like me) stay productive, avoid burnout, and keep track of daily progress.",
+      name: "Todo-list",
+      description: "Simple Todo-list with a basic features.",
       stack: [Html, Css, Js],
-      background: Zone,
+      background: Todos,
+      features: [
+        "Task management system that allows users to add, complete, delete, and restore tasks with real-time updates.",
+        "Calendar date picker for assigning and displaying task due dates.",
+        "Completed-task management with toggle visibility, counters, and clear visual distinction.",
+        "Smooth animations and micro-interactions to enhance user experience and usability.",
+        "Mobile-first responsive layout that works seamlessly.",
+      ],
+      learned:
+        "I strengthened my skills in vanilla JavaScript state management, DOM manipulation, form validation, responsive design, and creating user-friendly interfaces with smooth animations",
+      liveUrl: "https://frehitz-todolist.netlify.app/",
+      githubUrl: "https://github.com/Frehitzz/Task-Management-TodoList",
     },
   ];
 
