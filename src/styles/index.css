@@ -29,3 +29,20 @@ body {
 .scroll-wrapper:hover {
   animation-play-state: paused;
 }
+
+/* GIT CALENDAR */
+.react-activity-calendar__count {
+  color: white !important;
+}
+
+.react-activity-calendar__legend-colors {
+  color: white !important;
+}
+
+.calendar-container svg text {
+  fill: white !important;
+}
+
+.calendar-container svg rect {
+  rx: 2; /* Rounded corners */
+}

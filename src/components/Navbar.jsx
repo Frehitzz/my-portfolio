@@ -41,7 +41,7 @@ function Navbar() {
       </div>
 
       {/* MOBILE NAV */}
-      <div className="md:hidden mt-5 flex justify-between items-center p-2">
+      <div className="md:hidden flex justify-between items-center p-2">
         <div className="">
           <h1 className="text-white text-2xl">Fritzharly.</h1>
         </div>

@@ -5,13 +5,17 @@ import Aboutme from "../components/Aboutme.jsx";
 import Timeline from "../components/Timeline.jsx";
 import Softskills from "../components/Softskills.jsx";
 import Likebutton from "../components/Likebutton.jsx";
+import Gitcalendar from "../components/Gitcalendar.jsx";
 
 function Home() {
   return (
     <div className="px-4 md:px-10 lg:px-50">
-      <div className="lg:min-h-screen flex items-center justify-center">
+      <div className="lg:min-h-screen flex justify-center">
         <div className="w-full max-w-7xl flex flex-col lg:h-[80vh]">
           <Mainheader />
+          <div className="">
+            <Gitcalendar />
+          </div>
           <div className="mt-auto">
             <Counter />
           </div>

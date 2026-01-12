@@ -6,7 +6,7 @@ function Counter() {
     { value: 3, label: "Projects\ndeployed" },
   ];
   return (
-    <div className="flex mt-10 md:mt-15 lg:mt-0 justify-between">
+    <div className="flex mt-5 md:mt-15 lg:mt-0 justify-between">
       {stats.map((stat, index) => (
         <div key={index} className="projects flex items-center gap-1">
           <h1 className="text-5xl md:text-7x lg:text-8xl text-[#599c02]">
