@@ -45,7 +45,7 @@ function Mainheader() {
 
         <div className="md:flex mt-4 items-center gap-4">
           {/* RESUME CONTAINER */}
-          <button className="holographic-card text-lg flex md:w-30 lg:w-50 items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
+          <button className=" w-full holographic-card text-lg flex md:w-30 lg:w-50 items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
             <a
               href={Resume}
               target="_blank" // open new tab

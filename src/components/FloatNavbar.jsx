@@ -5,8 +5,8 @@ function FloatNavbar() {
   const [show, setShow] = useState(false);
   const location = useLocation();
   const navItems = [
-    { name: "Projects", link: "/projects" },
     { name: "Home", link: "/home" },
+    { name: "Projects", link: "/projects" },
     { name: "Contact", link: "/contact" },
   ];
 
@@ -45,7 +45,7 @@ function FloatNavbar() {
                     ? "text-[#91ff00] font-bold"
                     : ""
                 }`}
-                key={item}
+                key={item.link}
               >
                 <NavLink to={item.link}>{item.name}</NavLink>
               </li>
