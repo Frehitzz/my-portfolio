@@ -45,7 +45,7 @@ function Aboutme() {
 
   return (
     <div>
-      <h1 className="text-center text-3xl md:text-4xl my-7 lg:my-10 text-[#91ff00] text-bold">
+      <h1 className="text-center text-3xl md:text-4xl my-7 md:my-20 lg:my-10 text-[#91ff00] text-bold">
         ABOUT ME
       </h1>
 

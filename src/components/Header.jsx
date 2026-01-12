@@ -9,7 +9,7 @@ import Resume from "../assets/RESUME.pdf";
 
 function Mainheader() {
   return (
-    <div className="md:flex md:justify-center md: items-center md:gap-10">
+    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-10 lg:mt-0">
       {/* CIRCLE PORFILE */}
       <div className="flex justify-center">
         <div className="flex w-40 h-40 md:w-63 md:h-63 lg:w-83 lg:h-83 rounded-full bg-[#91ff00] items-center justify-center mt-8 lg:mt-0">

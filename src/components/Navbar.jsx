@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <>
       {/* Desktop nav */}
-      <div className="hidden lg:flex justify-between mt-5 px-15">
+      <div className="hidden md:flex justify-between mt-5 px-15 md:px-10">
         <div className="flex">
           <h1 className="text-white text-3xl">Fritzharly.</h1>
         </div>

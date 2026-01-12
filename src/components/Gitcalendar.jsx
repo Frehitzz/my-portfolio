@@ -1,7 +1,7 @@
 import { GitHubCalendar } from "react-github-calendar";
 function Gitcalendar() {
   return (
-    <div className="calendar-container my-10 lg:my-20 flex justify-center">
+    <div className="calendar-container my-10 md:my-15 lg:my-20 flex justify-center">
       <GitHubCalendar
         username="Frehitzz"
         blockSize={12}
