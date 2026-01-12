@@ -5,6 +5,7 @@ import { CgFacebook } from "react-icons/cg";
 import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
+import Resume from "../assets/RESUME.pdf";
 
 function Mainheader() {
   return (
@@ -44,14 +45,19 @@ function Mainheader() {
 
         <div className="md:flex mt-4 items-center gap-4">
           {/* RESUME CONTAINER */}
-          <div className="holographic-card text-lg flex md:w-30 lg:w-50 items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
-            <p className="flex items-center gap-2">
+          <button className="holographic-card text-lg flex md:w-30 lg:w-50 items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white">
+            <a
+              href={Resume}
+              target="_blank" // open new tab
+              rel="noopener noreferrer" // preventing the new page from accessing the original window
+              className="flex items-center gap-2"
+            >
               Resume
               <span>
                 <IoMdDownload />
               </span>
-            </p>
-          </div>
+            </a>
+          </button>
 
           {/* UNCOMMENT FOR WIDER DEVICE */}
           <p className="hidden sm:hidden md:block text-4xl text-white">|</p>
@@ -61,6 +67,8 @@ function Mainheader() {
             {/* FACEBOOK */}
             <a
               href="https://www.facebook.com/fritz.harly.3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-link facebook"
             >
               <CgFacebook className="icon text-4xl rounded-full border-[#91ff00] text-white" />
@@ -69,6 +77,8 @@ function Mainheader() {
             {/* INSTAGRAM */}
             <a
               href="https://www.instagram.com/frehitz_____/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-link instagram"
             >
               <FaInstagram className="icon text-4xl rounded-full border-[#91ff00] text-white" />
@@ -77,6 +87,8 @@ function Mainheader() {
             {/* LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/fritz-harly-degamo-35b37530a/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-link linkedin"
             >
               <RiLinkedinFill className="icon text-4xl rounded-full text-white" />
@@ -85,6 +97,8 @@ function Mainheader() {
             {/* GITHUB */}
             <a
               href="https://github.com/Frehitzz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-link github"
             >
               <FaGithub className="icon text-4xl rounded-full border-[#91ff00] text-white" />
