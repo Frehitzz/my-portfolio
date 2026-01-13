@@ -2,8 +2,8 @@ function Counter() {
   // ARRAY OF OBJECTS
   const stats = [
     { value: 20, label: "Age" },
-    { value: 5, label: "Projects" },
-    { value: 3, label: "Projects\ndeployed" },
+    { value: 3, label: "Projects" },
+    { value: 2, label: "Projects\ndeployed" },
   ];
   return (
     <div className="flex mt-5 md:mt-0 lg:mt-0 justify-between">
