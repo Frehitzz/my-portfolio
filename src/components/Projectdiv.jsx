@@ -72,7 +72,7 @@ function Projectdiv() {
 
   return (
     // main container
-    <div className="grid grid-cols-1 grid-rows-3 gap-3 mb-25 md:mb-30 md:mx-auto lg:mx-0 lg:grid-cols-3 ">
+    <div className="grid grid-cols-1 grid-rows-auto gap-3 mb-25 md:mb-30 md:mx-auto lg:mx-0 lg:grid-cols-3 ">
       {itemProjects.map((item) => (
         // mapping container
         <div className="flex flex-col justify-center border border-white/[0.1] p-2 rounded-3xl md:w-100 lg:w-auto">
