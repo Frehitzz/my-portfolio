@@ -116,13 +116,16 @@ function Contact() {
           ></textarea>
         </div>
         {/* button */}
-        <button
-          type="submit"
-          disabled={isSending}
-          className="holographic-card text-lg flex items-center justify-center gap-2 p-3 border rounded-4xl border-[#91ff00] text-white"
-        >
-          <p className="flex items-center gap-2">Send message</p>
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            disabled={isSending}
+            className="holographic-card text-lg flex items-center justify-center w-100 gap-2 p-3 border rounded-4xl border-[#91ff00] text-white"
+          >
+            <p className="flex items-center gap-2">Send message</p>
+          </button>
+        </div>
+
         {/* Status message */}
         {status && (
           <p
