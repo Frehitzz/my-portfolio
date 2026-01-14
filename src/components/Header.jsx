@@ -9,11 +9,14 @@ import Resume from "../assets/RESUME.pdf";
 
 function Mainheader() {
   return (
-    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-10 lg:mt-0">
+    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-10 lg:mt-10">
       {/* CIRCLE PORFILE */}
       <div className="flex justify-center">
         <div className="flex w-40 h-40 md:w-63 md:h-63 lg:w-83 lg:h-83 rounded-full bg-[#91ff00] items-center justify-center mt-8 lg:mt-0">
-          <div className="w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full bg-[url('../assets/images/me.jpg')] bg-cover bg-center"></div>
+          <div
+            className="w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full bg-[url('../assets/images/me.jpg')] bg-center"
+            style={{ backgroundSize: "80%" }}
+          ></div>
         </div>
       </div>
       <div className="">
