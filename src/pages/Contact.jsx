@@ -7,11 +7,12 @@ function Contact() {
   const [copied, setCopy] = useState(false);
   // user input container
   const [formData, setFormData] = useState({
-    //
+    //key values
     name: "",
     email: "",
     message: "",
   });
+
   // if the email is send or not
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState("");
@@ -40,6 +41,8 @@ function Contact() {
         serviceId,
         templateId,
         {
+          //we get the value stored on formData
+          // the from_name etc is the variable on our template
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
@@ -115,7 +118,7 @@ function Contact() {
             placeholder="Place your message here..."
           ></textarea>
         </div>
-        {/* button */}
+        {/* button for submitting  */}
         <div className="flex justify-center">
           <button
             type="submit"
