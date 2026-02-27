@@ -17,7 +17,7 @@ function Home() {
             <Gitcalendar />
           </div>
           <div className="mt-auto">
-            <Counter />
+            <Counter  />
           </div>
         </div>
       </div>

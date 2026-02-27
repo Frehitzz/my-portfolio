@@ -1,4 +1,4 @@
-import profilePic from "../assets/images/me.jpg";
+import profilePic from "../assets/images/portfoliopic.png";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdDownload } from "react-icons/io";
 import { CgFacebook } from "react-icons/cg";
@@ -9,13 +9,13 @@ import Resume from "../assets/RESUME.pdf";
 
 function Mainheader() {
   return (
-    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-10 lg:mt-10">
+    <div className="md:flex md:justify-center md: items-center md:gap-10 md:mt-5">
       {/* CIRCLE PORFILE */}
       <div className="flex justify-center">
         <div className="flex w-40 h-40 md:w-63 md:h-63 lg:w-83 lg:h-83 rounded-full bg-[#91ff00] items-center justify-center mt-8 lg:mt-0">
           <div
-            className="w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full bg-[url('../assets/images/me.jpg')] bg-center"
-            style={{ backgroundSize: "80%" }}
+            className="w-39 h-39 md:w-60 md:h-60 lg:w-80 lg:h-80 rounded-full bg-[url('../assets/images/portfoliopic.png')] bg-center"
+            style={{ backgroundSize: "100%" }}
           ></div>
         </div>
       </div>

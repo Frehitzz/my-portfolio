@@ -7,7 +7,7 @@ function Gitcalendar() {
   const years = Array.from({ length: 3 }, (_, i) => currentYear - 2 + i);
 
   return (
-    <div className="my-10 md:my-15 lg:my-20">
+    <div className="my-10">
       {/* GitHub Calendar */}
       <div className="calendar-container lg:flex justify-center gap-5">
         <GitHubCalendar

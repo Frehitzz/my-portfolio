@@ -1,7 +1,27 @@
 function Counter() {
+  const calculateAge = () => {
+    const birthDate = new Date(2005, 1, 11); // February 11, 2005, its 1 becuae its index
+    const today = new Date();
+
+    // finds the age by year difference
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthdayThisYear =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() >= birthDate.getDate());
+
+
+        // if the person hasnt had their birthday yet this
+    if (!hasHadBirthdayThisYear) {
+      age -= 1;
+    }
+
+    return age;
+  };
+
   // ARRAY OF OBJECTS
   const stats = [
-    { value: 20, label: "Age" },
+    { value: calculateAge(), label: "Age" },
     { value: 3, label: "Projects" },
     { value: 2, label: "Projects\ndeployed" },
   ];

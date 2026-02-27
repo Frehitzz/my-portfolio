@@ -44,12 +44,12 @@ function Aboutme() {
   ];
 
   return (
-    <div>
-      <h1 className="text-center text-3xl md:text-4xl my-7 md:my-20 lg:my-10 text-[#91ff00] text-bold">
+    <div className="mt-12 md:mt-16 lg:mt-20 mb-12 md:mb-16 lg:mb-20">
+      <h1 className="text-center text-3xl md:text-5xl lg:text-6xl mb-8 md:mb-12 lg:mb-14 text-[#91ff00] text-bold">
         ABOUT ME
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-4 mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-4 md:gap-5 lg:gap-6">
         {/* SHORT DESCRIPTION CONTAINER */}
         <div className="rounded-lg min-h-40 md:min-h-45 bg-[url('../assets/images/program.jpg')] bg-cover bg-center lg:col-span-2 lg:row-span-2">
           <div className="">
@@ -124,7 +124,7 @@ function Aboutme() {
           <p className="text-[#91ff00] text-lg md:text-2xl font-bold text-center">
             EDUCATION
           </p>
-          <div className="flex justify-center gap-5 mt-3 items-center">
+          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-5 mt-3 items-center">
             <div className="flex flex-col items-center">
               <h1 className="text-[#599c02] md:text-lg lg:text-2xl">
                 {education[0].level}
@@ -135,7 +135,7 @@ function Aboutme() {
               <p className="text-[#91ff00] md:text-lg">{education[0].year}</p>
             </div>
 
-            <div className="w-32 md:w-48 lg:w-80 h-0.5 bg-[#91ff00]"></div>
+            <div className="hidden md:block w-48 lg:w-80 h-0.5 bg-[#91ff00]"></div>
 
             <div className="flex flex-col items-center">
               <h1 className="text-[#599c02] md:text-lg lg:text-2xl">
