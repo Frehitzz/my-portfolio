@@ -23,7 +23,7 @@ function Mainheader() {
         {/* MAIN HEAD TEXT */}
         <div className="flex items-center justify-center mt-8 md:block">
           <h1 className="text-3xl md:text-6xl lg:text-8xl text-[#91ff00]">
-            Hi there123,
+            Hi there,
             <br className="hidden sm:hidden md:block" /> I'm Fritz Harly
           </h1>
         </div>
